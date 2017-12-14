@@ -15,15 +15,15 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-    ];
-
-  }
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    private _tokenService: Angular2TokenService
+  ) {
+    this._tokenService.init({
+      apiBase: 'https://your-cooper-api.herokuapp.com/api/v1'
+    });
 
   initializeApp() {
     this.platform.ready().then(() => {
