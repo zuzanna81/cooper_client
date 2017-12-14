@@ -12,6 +12,6 @@ export class PersonProvider {
   constructor(private cooper: CooperProvider) {}
 
   doAssessment(distance: number): void {
-    this.assessmentMessage = this.cooper.assess(this, distance);
+    this.assessmentMessage = this.cooper.assess(this, distance)
   }
 }

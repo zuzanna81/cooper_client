@@ -3,7 +3,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CooperProvider {
-
   constructor() {
     console.log('Hello CooperProvider Provider');
   }
@@ -69,7 +68,7 @@ export class CooperProvider {
       return 'Invalid age range';
     }
 
-    const distanceRanges = this.coopertTable[person.gender.toLowerCase()][
+    const distanceRanges = this.cooperTable[person.gender.toLowerCase()][
       ageRange
     ];
 
@@ -82,7 +81,7 @@ export class CooperProvider {
       ) {
         ratingIndex = index;
       } else {
-        constminMax = dRange.split('-');
+        const minMax = dRange.split('-');
         const min = parseInt(minMax[0], 10);
         const max = parseInt(minMax[1], 10);
 
