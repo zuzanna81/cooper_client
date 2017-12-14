@@ -18,8 +18,11 @@ export class HomePage {
     this.user = { distance: 1000, age: 20, gender: 'female' };
   }
 
-  calculate(user) {
-    this.person.doAssessment(user.distance);
+  calculate() {
+    this.person.age = this.user.age;
+    this.person.gender = this.user.gender;
+
+    this.person.doAssessment(this.user.distance);
     this.perfomanceData
       .saveData({ perfomance_data: { data: { message: this.person.assessmentMessage}}})
       .subscribe(data => console.log(data));
