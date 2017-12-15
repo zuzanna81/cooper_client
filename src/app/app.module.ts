@@ -14,11 +14,14 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-data';
+import { ModalController } from 'ionic-angular';
+import { ResultsPage } from '../pages/results/results';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    ResultsPage
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-
   entryComponents: [
     MyApp,
     HomePage,
+    ResultsPage
   ],
   providers: [
     StatusBar,
@@ -38,7 +42,8 @@ import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-
     PersonProvider,
     CooperProvider,
     Angular2TokenService,
-    PerfomanceDataProvider
+    PerfomanceDataProvider,
+    ModalController,
   ]
 })
 export class AppModule {}

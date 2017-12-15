@@ -26,7 +26,7 @@ export class MyApp {
     private alertCtrl: AlertController
   ) {
     this._tokenService.init({
-      apiBase: 'https://your-cooper-api.herokuapp.com/api/v1'
+      apiBase: 'https://zb-cooper-api.herokuapp.com/api/v1'
     });
   }
   initializeApp() {
