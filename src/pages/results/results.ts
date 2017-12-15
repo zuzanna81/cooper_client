@@ -17,7 +17,8 @@ export class ResultsPage {
   ) {}
 
   ionViewDidLoad() {
-    this.performanceData.getResults()
+    this.performanceData
+    .getResults()
     .subscribe(data => (this.results = data.entries));
     console.log('ionViewDidLoad ResultsPage');
   }
