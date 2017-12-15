@@ -13,7 +13,7 @@ import { CooperProvider } from '../providers/cooper/cooper';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
-import { PerfomanceDataProvider } from '../providers/perfomance-data/perfomance-data';
+import { PerformanceDataProvider } from '../providers/performance-data/performance-data';
 import { ModalController } from 'ionic-angular';
 import { ResultsPage } from '../pages/results/results';
 
@@ -42,7 +42,7 @@ import { ResultsPage } from '../pages/results/results';
     PersonProvider,
     CooperProvider,
     Angular2TokenService,
-    PerfomanceDataProvider,
+    PerformanceDataProvider,
     ModalController,
   ]
 })

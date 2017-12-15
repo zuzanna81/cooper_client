@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
-import { PerfomanceDataProvider } from '../../providers/perfomance-data/perfomance-data'
+import { PerformanceDataProvider } from '../../providers/performance-data/performance-data'
 
 @Component({
   selector: 'page-results',
@@ -10,14 +10,14 @@ import { PerfomanceDataProvider } from '../../providers/perfomance-data/perfoman
 export class ResultsPage {
   results = [];
   constructor(
-    private perfomanceData: PerfomanceDataProvider,
+    private performanceData: PerformanceDataProvider,
     public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController
   ) {}
 
   ionViewDidLoad() {
-    this.perfomanceData.getResults()
+    this.performanceData.getResults()
     .subscribe(data => (this.results = data.entries));
     console.log('ionViewDidLoad ResultsPage');
   }
